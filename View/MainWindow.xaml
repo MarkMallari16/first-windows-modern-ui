@@ -20,14 +20,26 @@
                     Style="{StaticResource TitleTextBlockStyle}"
                     HorizontalAlignment="Center"
                     />
+            
             <TextBlock
-                    Text="Enter your name"
+                    Text="Enter First Letter of your  First Name"
                     Style="{StaticResource BodyTextBlockStyle}"/>
             <TextBox
-                     Width="500"
-                     Height="32"
-                     PlaceholderText="Enter text here"
-                     Text="{x:Bind ViewModel.InputName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    Width="500"
+                    Height="32"
+                    PlaceholderText="e.g. M"
+                    Text="{x:Bind ViewModel.FirstLetter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock
+                    Text="Enter your Birth Month Number (1 - 12)"
+                    Style="{StaticResource BodyTextBlockStyle}"/> 
+            <TextBox
+               Width="500"
+               Height="32"
+               PlaceholderText="e.g. 11"
+               Text="{x:Bind ViewModel.BirthMonthDateNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            
+            
             <StackPanel Orientation="Horizontal" Spacing="10">
                 <Button 
                     Width="246"
@@ -35,8 +47,8 @@
                     <StackPanel 
                          Spacing="8"
                          Orientation="Horizontal">
-                            <SymbolIcon Symbol="Refresh"/>
-                            <TextBlock Text="Reset"/>
+                        <SymbolIcon Symbol="Refresh"/>
+                        <TextBlock Text="Reset"/>
                     </StackPanel>
                 </Button>
                 <Button
@@ -45,7 +57,7 @@
                      >
                     <StackPanel Orientation="Horizontal"
                         Spacing="8"
-                        HorizontalAlignment="Center">   
+                        HorizontalAlignment="Center">
                         <TextBlock Text="Generate Christmas Name" />
                         <SymbolIcon Symbol="Send"/>
                     </StackPanel>
@@ -55,9 +67,14 @@
             <TextBlock Text="{x:Bind ViewModel.ResultName, Mode=OneWay}" 
                FontSize="24" 
                HorizontalAlignment="Center"
-               Foreground="Green"
+               Foreground="LimeGreen"
                FontWeight="Bold"/>
+
+            <HyperlinkButton
+               Content="Follow me on GitHub"
+               NavigateUri="https://github.com/MarkMallari16"
+               HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
-    
+
 </Window>
