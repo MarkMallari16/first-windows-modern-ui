@@ -30,7 +30,8 @@
                      Text="{x:Bind ViewModel.InputName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <StackPanel Orientation="Horizontal" Spacing="10">
                 <Button 
-                    Width="250">
+                    Width="246"
+                    Command="{x:Bind ViewModel.ResetChristmasNameCommand}">
                     <StackPanel 
                          Spacing="8"
                          Orientation="Horizontal">
@@ -39,7 +40,7 @@
                     </StackPanel>
                 </Button>
                 <Button
-                    Width="250"
+                    Width="246"
                     Command="{x:Bind ViewModel.GenerateChristmasNameCommand}"
                      >
                     <StackPanel Orientation="Horizontal"

@@ -31,6 +31,13 @@ namespace FirstWinUI.ViewModels
 
             ResultName = $"{randomPrefix} {InputName} {randomSuffix}";
         }
+
+        [RelayCommand]
+        private void ResetChristmasName()
+        {
+            InputName = string.Empty;
+            ResultName = string.Empty;
+        }
        
     }
 }
