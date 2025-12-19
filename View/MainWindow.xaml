@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="FirstWinUI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FirstWinUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="FirstWinUI">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+            <TextBlock
+                    Text="Christmas Name Generator"
+                    Style="{StaticResource TitleTextBlockStyle}"
+                    HorizontalAlignment="Center"
+                    />
+            <TextBlock
+                    Text="Enter your name"
+                    Style="{StaticResource BodyTextBlockStyle}"/>
+            <TextBox
+                     Width="500"
+                     Height="32"
+                     PlaceholderText="Enter text here"
+                     Text="{x:Bind ViewModel.InputName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <Button 
+                    Width="250">
+                    <StackPanel 
+                         Spacing="8"
+                         Orientation="Horizontal">
+                            <SymbolIcon Symbol="Refresh"/>
+                            <TextBlock Text="Reset"/>
+                    </StackPanel>
+                </Button>
+                <Button
+                    Width="250"
+                    Command="{x:Bind ViewModel.GenerateChristmasNameCommand}"
+                     >
+                    <StackPanel Orientation="Horizontal"
+                        Spacing="8"
+                        HorizontalAlignment="Center">   
+                        <TextBlock Text="Generate Christmas Name" />
+                        <SymbolIcon Symbol="Send"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <TextBlock Text="{x:Bind ViewModel.ResultName, Mode=OneWay}" 
+               FontSize="24" 
+               HorizontalAlignment="Center"
+               Foreground="Green"
+               FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+    
+</Window>
