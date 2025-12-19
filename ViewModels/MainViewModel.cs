@@ -48,7 +48,8 @@ namespace FirstWinUI.ViewModels
 
         private string generateFirstLetterName(string firstLetterName)
         {
-            switch (firstLetterName)
+            string firstLetterUpper = firstLetterName.ToUpper();
+            switch (firstLetterUpper)
             {
                 case "A":
                     return "Jingle";
