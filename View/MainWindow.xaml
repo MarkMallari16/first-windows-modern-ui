@@ -16,29 +16,28 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
             <TextBlock
-                    Text="Christmas Name Generator"
-                    Style="{StaticResource TitleTextBlockStyle}"
-                    HorizontalAlignment="Center"
-                    />
-            
+                Text="Christmas Name Generator"
+                Style="{StaticResource TitleTextBlockStyle}"
+                HorizontalAlignment="Center"
+                />
             <TextBlock
-                    Text="Enter First Letter of your  First Name"
-                    Style="{StaticResource BodyTextBlockStyle}"/>
+                Text="Enter First Letter of your  First Name"
+                Style="{StaticResource BodyTextBlockStyle}"/>
             <TextBox
-                    Width="500"
-                    Height="32"
-                    PlaceholderText="e.g. M"
-                    Text="{x:Bind ViewModel.FirstLetter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                Width="500"
+                Height="32"
+                PlaceholderText="e.g. M"
+                Text="{x:Bind ViewModel.FirstLetter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
             <TextBlock
-                    Text="Enter your Birth Month Number (1 - 12)"
-                    Style="{StaticResource BodyTextBlockStyle}"/> 
-            <TextBox
-               Width="500"
-               Height="32"
-               PlaceholderText="e.g. 11"
-               Text="{x:Bind ViewModel.BirthMonthDateNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                Text="Enter your Birth Month Number (1 - 12)"
+                Style="{StaticResource BodyTextBlockStyle}"/> 
             
+            <TextBox
+                Width="500"
+                Height="32"
+                PlaceholderText="e.g. 11"
+                Text="{x:Bind ViewModel.BirthMonthDateNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             
             <StackPanel Orientation="Horizontal" Spacing="10">
                 <Button 
